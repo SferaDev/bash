@@ -1,22 +1,22 @@
-import fs from 'fs-extra';
-import { tmpdir } from 'os';
-import execa from 'execa';
-import fetch from 'node-fetch';
-import { join, dirname, normalize, relative } from 'path';
-import { snakeCase } from 'snake-case';
 import {
-	FileFsRef,
-	glob,
-	download,
-	Lambda,
-	shouldServe,
 	BuildV3,
-	PrepareCache,
-	Files,
+	download,
 	FileBlob,
+	FileFsRef,
+	Files,
 	getWriteableDirectory,
+	glob,
+	Lambda,
+	PrepareCache,
+	shouldServe,
 	streamToBuffer,
 } from '@vercel/build-utils';
+import { snakeCase } from 'change-case';
+import { execa } from 'execa';
+import fs from 'fs-extra';
+import fetch from 'node-fetch';
+import { tmpdir } from 'os';
+import { dirname, join, normalize, relative } from 'path';
 
 const TMP = tmpdir();
 
@@ -109,7 +109,7 @@ export const build: BuildV3 = async ({
 
 	const buildDir = await getWriteableDirectory();
 
-	await execa(join(__dirname, 'build.sh'), [], {
+	await execa('./build.sh', {
 		env,
 		cwd: buildDir,
 		stdio: 'inherit',
