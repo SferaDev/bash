@@ -109,7 +109,7 @@ export const build: BuildV3 = async ({
 
 	const buildDir = await getWriteableDirectory();
 
-	await execa('./build.sh', {
+	await execa(join(__dirname, 'build.sh'), [], {
 		env,
 		cwd: buildDir,
 		stdio: 'inherit',

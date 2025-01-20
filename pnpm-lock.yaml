@@ -45,6 +45,9 @@ importers:
       '@vercel/frameworks':
         specifier: ^3.4.0
         version: 3.4.0
+      '@vercel/ncc':
+        specifier: ^0.38.3
+        version: 0.38.3
       '@vercel/routing-utils':
         specifier: ^5.0.0
         version: 5.0.0
@@ -436,6 +439,10 @@ packages:
 
   '@vercel/frameworks@3.4.0':
     resolution: {integrity: sha512-JWloq3L2OcddRHAKlud86CxLwxHm98VqO6fWRthULLXUE8bAxN39vctwVYBNsfulDBnksiosM9D80EEbmtMkag==}
+
+  '@vercel/ncc@0.38.3':
+    resolution: {integrity: sha512-rnK6hJBS6mwc+Bkab+PGPs9OiS0i/3kdTO+CkI8V0/VrW3vmz7O2Pxjw/owOlmo6PKEIxRSeZKv/kuL9itnpYA==}
+    hasBin: true
 
   '@vercel/routing-utils@5.0.0':
     resolution: {integrity: sha512-llvozDbkGDSelbgigAt9IwCQS8boP4rNHfy3rpJf0DqSn6UDlkFX270NwIQruyXN9KHktHC9qOof6Ik2+bT88A==}
@@ -2003,6 +2010,8 @@ snapshots:
       '@iarna/toml': 2.2.3
       '@vercel/error-utils': 2.0.3
       js-yaml: 3.13.1
+
+  '@vercel/ncc@0.38.3': {}
 
   '@vercel/routing-utils@5.0.0':
     dependencies:

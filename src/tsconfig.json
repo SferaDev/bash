@@ -1,8 +1,9 @@
 {
   "compilerOptions": {
     "strict": true,
-    "module": "CommonJS",
-    "target": "es2018",
+    "module": "ESNext",
+    "target": "ESNext",
+    "moduleResolution": "bundler",
     "esModuleInterop": true,
     "lib": ["esnext"],
     "outDir": "../dist",
