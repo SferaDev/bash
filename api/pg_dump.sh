@@ -1,4 +1,4 @@
-import "./pg_dump"
+import "../bin/pg_dump"
 
 handler() {
     ./pg_dump --version
